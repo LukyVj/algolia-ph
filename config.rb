@@ -17,7 +17,7 @@ page '/*.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 # General configuration
-set :relative_links, true
+
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -42,4 +42,6 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
+  activate :asset_host, host: 'algolia-ph'
+  set :asset_host, ENV['ASSET_HOST'] || "/static_assets"
 end
