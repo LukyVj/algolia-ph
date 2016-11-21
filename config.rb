@@ -42,6 +42,6 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
-  activate :asset_host, host: 'algolia-ph'
-  set :asset_host, ENV['ASSET_HOST'] || "/static_assets"
+  activate :asset_host, host: ''
+  set :asset_host, ENV['ASSET_HOST'] || "static_assets"
 end
